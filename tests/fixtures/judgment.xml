@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+      <identification><FRBRWork><FRBRname value="AB v SSWP" /></FRBRWork></identification>
+    </meta>
+    <judgmentBody>
+      <level>
+        <paragraph eId="para_1"><num>1.</num><content><p>The claimant received Universal Credit.</p></content></paragraph>
+        <paragraph eId="para_2"><num>2.</num><content><p>Self-employment was the central issue.</p></content></paragraph>
+        <paragraph eId="lvl_3"><heading>Reasons</heading></paragraph>
+      </level>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

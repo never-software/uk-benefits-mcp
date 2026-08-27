@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+  <updated>2026-08-27T12:00:00+01:00</updated>
+  <entry>
+    <id>http://www.legislation.gov.uk/id/uksi/2013/376</id>
+    <title>The Universal Credit Regulations 2013</title>
+    <updated>2026-04-06T00:00:00+01:00</updated>
+    <summary>Regulations governing Universal Credit.</summary>
+    <ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument" />
+    <ukm:Year Value="2013" />
+    <ukm:Number Value="376" />
+  </entry>
+</feed>

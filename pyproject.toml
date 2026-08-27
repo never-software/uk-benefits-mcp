@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling>=1.29,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uk-benefits-mcp"
+version = "0.1.0"
+description = "Read-only MCP access to official UK benefits, tax, legislation, and case-law evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "never.software" }]
+keywords = ["mcp", "universal-credit", "benefits", "hmrc", "legislation", "case-law"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "beautifulsoup4>=4.13,<5",
+  "defusedxml>=0.7,<1",
+  "httpx>=0.28,<1",
+  "mcp>=2,<3",
+  "pydantic>=2.11,<3",
+  "pypdf>=6,<7",
+]
+
+[project.urls]
+Homepage = "https://github.com/never-software/uk-benefits-mcp"
+Issues = "https://github.com/never-software/uk-benefits-mcp/issues"
+Source = "https://github.com/never-software/uk-benefits-mcp"
+
+[project.scripts]
+uk-benefits-mcp = "uk_benefits_mcp.__main__:main"
+
+[dependency-groups]
+dev = [
+  "build>=1.3,<2",
+  "pyright>=1.1.405",
+  "pytest>=8.4,<10",
+  "pytest-asyncio>=1.2,<2",
+  "respx>=0.22,<1",
+  "ruff>=0.13,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/uk_benefits_mcp"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+asyncio_mode = "auto"
+markers = ["live: calls official public UK sources"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.pyright]
+include = ["src", "tests"]
+pythonVersion = "3.11"
+typeCheckingMode = "strict"
+reportUnusedFunction = false

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:tna="https://caselaw.nationalarchives.gov.uk">
+  <updated>2026-08-27T12:00:00+01:00</updated>
+  <entry>
+    <title>AB v Secretary of State for Work and Pensions</title>
+    <link href="https://caselaw.nationalarchives.gov.uk/ukut/aac/2026/312" rel="alternate" />
+    <link href="https://caselaw.nationalarchives.gov.uk/ukut/aac/2026/312/data.xml"
+          rel="alternate" type="application/akn+xml" />
+    <published>2026-07-01T00:00:00Z</published>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <author><name>Upper Tribunal (Administrative Appeals Chamber)</name></author>
+    <tna:identifier slug="ukut/aac/2026/312" type="ukncn">[2026] UKUT 312 (AAC)</tna:identifier>
+    <tna:identifier slug="tna.example1" type="fclid">example1</tna:identifier>
+  </entry>
+</feed>

@@ -1,0 +1,22 @@
+{
+  "public_updated_at": "2026-08-01T09:30:00+01:00",
+  "details": {
+    "attachments": [
+      {
+        "title": "Chapter H4: Earned income - self-employed earnings",
+        "url": "https://assets.publishing.service.gov.uk/media/example/admh4.pdf",
+        "content_type": "application/pdf"
+      },
+      {
+        "title": "Chapter H1: Capital",
+        "url": "https://assets.publishing.service.gov.uk/media/example/admh1.pdf",
+        "content_type": "application/pdf"
+      },
+      {
+        "title": "Rejected off-site attachment",
+        "url": "https://example.invalid/not-official.pdf",
+        "content_type": "application/pdf"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.never-software/uk-benefits-mcp",
+  "title": "UK Benefits Evidence",
+  "description": "Read-only access to official UK benefits, tax, legislation, and case-law evidence",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/never-software/uk-benefits-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "uk-benefits-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
