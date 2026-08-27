@@ -37,3 +37,8 @@ jobs:
       - run: pytest -m "not live"
       - if: matrix.python-version == '3.14'
         run: python -m build
+      - if: matrix.python-version == '3.14'
+        name: Build and start Docker image
+        run: |
+          docker build --tag uk-benefits-mcp:ci .
+          docker run --rm uk-benefits-mcp:ci --version
