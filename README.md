@@ -32,7 +32,11 @@ Generic MCP configuration (used by Claude Desktop, Cursor, and many other client
   "mcpServers": {
     "uk-benefits": {
       "command": "uvx",
-      "args": ["uk-benefits-mcp"]
+      "args": [
+        "--from",
+        "git+https://github.com/never-software/uk-benefits-mcp@v0.1.0",
+        "uk-benefits-mcp"
+      ]
     }
   }
 }
@@ -41,20 +45,23 @@ Generic MCP configuration (used by Claude Desktop, Cursor, and many other client
 For Codex CLI:
 
 ```bash
-codex mcp add uk-benefits -- uvx uk-benefits-mcp
+codex mcp add uk-benefits -- uvx --from \
+  git+https://github.com/never-software/uk-benefits-mcp@v0.1.0 \
+  uk-benefits-mcp
 ```
 
 An AI subscription by itself is not enough: the app must support custom MCP
 servers. No GOV.UK, DWP, HMRC, or project API key is needed.
 
-For an unreleased branch or commit, install directly from GitHub:
+To test the latest unreleased `main` branch, replace `@v0.1.0` with `@main`.
+The same configuration written on one line is:
 
 ```json
 {
   "mcpServers": {
     "uk-benefits": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/never-software/uk-benefits-mcp", "uk-benefits-mcp"]
+      "args": ["--from", "git+https://github.com/never-software/uk-benefits-mcp@v0.1.0", "uk-benefits-mcp"]
     }
   }
 }
@@ -90,7 +97,8 @@ Example requests an MCP client can make:
 Local Streamable HTTP is available for clients that cannot launch a subprocess:
 
 ```bash
-uvx uk-benefits-mcp --transport http --port 8000
+uvx --from git+https://github.com/never-software/uk-benefits-mcp@v0.1.0 \
+  uk-benefits-mcp --transport http --port 8000
 ```
 
 The MCP endpoint is `http://127.0.0.1:8000/mcp`. It binds to localhost by default.
@@ -139,6 +147,10 @@ uv run pyright
 The live suite only calls the public official sources listed above. See
 [`docs/design.md`](docs/design.md) for the frozen scope, failure policy, and
 verification gates.
+
+`server.json` is prepared for a future PyPI and official MCP Registry release;
+the project is not listed there yet. The versioned GitHub command above is the
+current public installation path.
 
 ## Licence
 
